@@ -1,19 +1,19 @@
+p{
+    font-size:18px;
 
-html,
-body,
-div.background
+}
+article#main
 {    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
-height: 100%; /* udiv.backgroundv‚É‘Î‚µ‚Ä‚Ímin-height‚É‘Î‰ž‚µ‚Ä‚¢‚È‚¢ƒuƒ‰ƒEƒU—p */
-background: #EDEDED;
+    background: #EDEDED;
 }
  
 div.background {
-min-height: 100%; /* Å¬‚Ì‚‚³ */
+min-height: 100%; /* æœ€å°ã®é«˜ã• */
 
 }
  
 body > div.background {
-  height: auto; /* —v‘f‚ð’´‚¦‚½•ª‚Ì”wŒi‚ªL‚Ñ‚È‚¢ƒuƒ‰ƒEƒU—p */
+  height: auto; /* è¦ç´ ã‚’è¶…ãˆãŸåˆ†ã®èƒŒæ™¯ãŒä¼¸ã³ãªã„ãƒ–ãƒ©ã‚¦ã‚¶ç”¨ */
 }
 
 @font-face{
@@ -27,7 +27,7 @@ img{
     padding:30px;
 }
  
-h1{
+h1#title{
     /*font-family: Bough-Condensed;*/
     font-size: 14pt;
     font-weight: bold;
@@ -60,6 +60,11 @@ box-shadow: 0 10px 6px -6px #777;
     clear:both;
 }
 
+img.cool{
+    box-shadow: 10px 10px 10px #777;
+    vertical-align: middle;
+    padding:0;
+}
 
 article{
     padding:30px;

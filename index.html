@@ -24,88 +24,145 @@
 
 <header>
 <img src="img/logo.png">
-<h1>Wake Up With Roomba!</h1>
+<h1 id="title">Wake Up With Roomba!</h1>
 </header>
-<article>
-	<section class="container">
+<article id="main">
+    <section class="container">
+        <div class="row" style="padding:20px;">
+
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3><span class="glyphicon glyphicon-time"></span>Alarm Time</h3>
+
+                        <div class="row">
+                            <div class="col-md-5">
+                                <select id="select_hour" class="form-control">
+                                <script type="text/javascript">
+                                    for (var i=0; i<24; i++){
+                                  document.write('<option value="' + i + '">' + i + '</option>');
+                                 }
+                                 </script>
+                                 </select>
+                              </div>
+                            <div class="col-md-1">：</div>
+                            <div class="col-md-5">
+                                <select id="select_minute" class="form-control">
+                                <script type="text/javascript">
+                                    for (var i=0; i<60; i++){
+                                    document.write('<option value="' + i + '">' + i + '</option>');
+                                    }
+                                </script>
+                                </select>
+                            </div>
+                        </div>
+                        <h3><span class="glyphicon glyphicon-globe"></span> Pref</h3>
+                        <select id="select_pref" class="form-control"></select>
+
+                        <div class="text-center">
+                            <div id="reg_time"></div> <!-- 登録時間の表示 -->
+                        </div>
 
 
-		<div class="row" style="padding:20px;">
+                    </div>
 
-			<div class="col-md-8">
-				<div class="row">
-					<div class="col-md-6">
-						<h3><span class="glyphicon glyphicon-time"></span>Alarm Time</h3>
+                    <div class="col-md-6">
+                        <h3><span class="glyphicon glyphicon-music"></span>Sound</h3>
+                        <select id="select_sound" class="form-control">
+                        <script type="text/javascript">
+                        for (var i=1; i<11; i++){
+                            document.write('<option value=' + i + '>サウンド' + i + '</option>');
+                        }
+                        </script>
+                        </select>
 
-						<div class="row">
-							<div class="col-md-5">
-								<select id="select_hour" class="form-control">
-		                        <script type="text/javascript">
-   		 	                        for (var i=0; i<24; i++){
-   	    	                      document.write('<option value="' + i + '">' + i + '</option>');
-       		                     }
-       		    	             </script>
-       			                 </select>
-       			              </div>
-                        	<div class="col-md-1">：</div>
-                        	<div class="col-md-5">	
-								<select id="select_minute" class="form-control">
-								<script type="text/javascript">
-									for (var i=0; i<60; i++){
-							 		document.write('<option value="' + i + '">' + i + '</option>');
-									}
-								</script>
-								</select>
-							</div>
-						</div>
-						<h3><span class="glyphicon glyphicon-globe"></span> Pref</h3>
-						<select id="select_pref" class="form-control"></select>	
-
-						<div class="text-center">
-							<div id="reg_time"></div> <!-- 登録時間の表示 -->
-						</div>
-
-
-					</div>
-
-					<div class="col-md-6">
-						<h3><span class="glyphicon glyphicon-music"></span>Sound</h3>
-						<select id="select_sound" class="form-control">
-						<script type="text/javascript">
-					    for (var i=1; i<11; i++){
-						    document.write('<option value=' + i + '>サウンド' + i + '</option>');
-						}
-						</script>
-						</select>
-		
-						<h3><span class="glyphicon glyphicon-globe"></span>City</h3>
-						<select id="select_city" class="form-control"> <!-- class="form-control" -->
-						</select>
-						       <div class="text-center">
-    	                <h2>Alarm Switch<br><input type="checkbox" id="alarm_switch" name="alarm_switch">
-       		             </h2>
-       		         </div>
-					</div>
+                        <h3><span class="glyphicon glyphicon-globe"></span>City</h3>
+                        <select id="select_city" class="form-control"> <!-- class="form-control" -->
+                        </select>
+                               <div class="text-center">
+                        <h2>Alarm Switch<br><input type="checkbox" id="alarm_switch" name="alarm_switch">
+                         </h2>
+                     </div>
+                    </div>
 
 
 
-				</div>
-				<div class="text-center">
+                </div>
+                <div class="text-center">
                     <button id="send_time" class="btn btn-success"><span class="glyphicon glyphicon-bell" aria-hidden="true"></span>Set Alarm</button>
                 </div>
-			</div>
-
-				
-
-			<div class="col-md-4">
-				<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/gutara_morgen" data-widget-id="611783686422331392">@gutara_morgenさんのツイート</a>
-			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>			
-			</div><!-- twitter -->
+            </div>
 
 
-		</div>
 
-	</section>
+            <div class="col-md-4">
+                <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/gutara_morgen" data-widget-id="611783686422331392">@gutara_morgenさんのツイート</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            </div><!-- twitter -->
+
+
+        </div>
+
+    </section>
+</article>
+
+<article>
+    <section>
+        <div class="container">
+            <div class="text-center">
+                <h1>What is Gutara Morgen?</h1>
+                <p>
+                    Gutara Morgenは、Team A.S.Tが提案する快適な朝を演出するソリューションです。<br>
+                    Gutara Morgenは、革新的な2段階のアラームシステムで確実にユーザーの起床を実現します。
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6">
+                    <img src="img/create2.png" class="img-circle img-responsive cool">
+                </div>
+            </div>
+            <hr/>
+            <h1 class="text-center">Usage</h1>
+            <div class="row">
+                <div class="col-md-8">
+                    <h2>Setting by Web Page</h2>
+                    <p>
+                        ユーザーはWeb経由で起きる時間と、自分の地域を設定できます。<br>
+                        設定した地域の天気をGutara Morgenはお知らせします。
+                    </p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="img/webpage.png" alt="" class="img-responsive cool">
+                </div>
+                <div class="col-md-9">
+                    <h2>1st Stage Alarm</h2>
+                    <p>
+                        時刻になったらGutara Morgenは優しい声とアラームでユーザーを起こします。<br>
+                        さらに、Gutara Morgenはアラームを鳴らしながら動き、アラームを止めた後の二度寝を防止します。<br>
+                        ユーザーはGutara Morgenの前方のバンパを押すことでアラームを止めることができます。<br>
+                        アラームを止めた後、Gutara Morgenは設定した地域の天気をしゃべります。雨の日も安心です。<br>
+                        一定時間以上起きることができないと、Gutara Morgenは2nd Stageに移行します。
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <img src="img/1st.png" alt="" class="img-responsive cool">
+
+                </div>
+                <div class="col-md-8">
+                    <h2>2nd Stage Alarm</h2>
+                    <p>
+                        2nd Stageに移行したGutara Morgenはユーザーに容赦をしません。<br>
+                        まず、起こす口調が荒くなります。<br>
+                        一定時間以上起きることができない場合、起きられなかったことを勝手にツイートします。<br>
+                        ツイートされたくなければ、起きましょう。
+                    </p>
+                </div>
+                <div class="col-md-4" style="margin-top:30px;">
+                    <img src="img/2nd.png" alt="" class="img-responsive cool">
+                </div>
+            </div>
+        </div>
+    </section>
 </article>
 </body>
 </html>
