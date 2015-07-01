@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang ="ja">
+<head>
+<meta charset="utf-8">
+<title>Gutara Morgen</title>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/tinytools.toggleswitch.min.js"></script>
+<script type="text/javascript" src="js/create.js"></script>
+
+<link rel="stylesheet" href="CSS/bootstrap.min.css">
+<link rel="stylesheet" href="CSS/bootstrap-select.min.css">
+<link rel="stylesheet" href="CSS/tinytools.toggleswitch.min.css">
+
+<link rel="stylesheet" type="text/css" href="CSS/base.css">
+
+<link href='http://fonts.googleapis.com/css?family=Condiment' rel='stylesheet' type='text/css'>
+
+
+
+</head>
+<body>
+
+<header>
+<img src="img/logo.png">
+<h1>Wake Up With Roomba!</h1>
+</header>
+<article>
+	<section class="container">
+
+
+		<div class="row" style="padding:20px;">
+
+			<div class="col-md-8">
+				<div class="row">
+					<div class="col-md-6">
+						<h3><span class="glyphicon glyphicon-time"></span>Alarm Time</h3>
+
+						<div class="row">
+							<div class="col-md-5">
+								<select id="select_hour" class="form-control">
+		                        <script type="text/javascript">
+   		 	                        for (var i=0; i<24; i++){
+   	    	                      document.write('<option value="' + i + '">' + i + '</option>');
+       		                     }
+       		    	             </script>
+       			                 </select>
+       			              </div>
+                        	<div class="col-md-1">：</div>
+                        	<div class="col-md-5">	
+								<select id="select_minute" class="form-control">
+								<script type="text/javascript">
+									for (var i=0; i<60; i++){
+							 		document.write('<option value="' + i + '">' + i + '</option>');
+									}
+								</script>
+								</select>
+							</div>
+						</div>
+						<h3><span class="glyphicon glyphicon-globe"></span> Pref</h3>
+						<select id="select_pref" class="form-control"></select>	
+
+						<div class="text-center">
+							<div id="reg_time"></div> <!-- 登録時間の表示 -->
+						</div>
+
+
+					</div>
+
+					<div class="col-md-6">
+						<h3><span class="glyphicon glyphicon-music"></span>Sound</h3>
+						<select id="select_sound" class="form-control">
+						<script type="text/javascript">
+					    for (var i=1; i<11; i++){
+						    document.write('<option value=' + i + '>サウンド' + i + '</option>');
+						}
+						</script>
+						</select>
+		
+						<h3><span class="glyphicon glyphicon-globe"></span>City</h3>
+						<select id="select_city" class="form-control"> <!-- class="form-control" -->
+						</select>
+						       <div class="text-center">
+    	                <h2>Alarm Switch<br><input type="checkbox" id="alarm_switch" name="alarm_switch">
+       		             </h2>
+       		         </div>
+					</div>
+
+
+
+				</div>
+				<div class="text-center">
+                    <button id="send_time" class="btn btn-success"><span class="glyphicon glyphicon-bell" aria-hidden="true"></span>Set Alarm</button>
+                </div>
+			</div>
+
+				
+
+			<div class="col-md-4">
+				<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/gutara_morgen" data-widget-id="611783686422331392">@gutara_morgenさんのツイート</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>			
+			</div><!-- twitter -->
+
+
+		</div>
+
+	</section>
+</article>
+</body>
+</html>
