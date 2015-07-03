@@ -23,9 +23,9 @@ $(document).ready(function() {
 
 // 初期化関数
 function init() {
-	$.ajax({
-		url : "http://localhost:8080/time/init"
-	});
+//	$.ajax({
+//		url : "http://localhost:8080/time/init"
+//	});
 	$.ajax({
 		url : "time.txt",
 		success : function(data) {
@@ -65,10 +65,10 @@ function update() {
 		var now_date = new Date();
 		if ((now_date.getHours() == registered_date.getHours())
 				&& (now_date.getMinutes() == registered_date.getMinutes())) {
-			$.ajax({
-				url : "http://localhost:8080/create",
-				data : "action="+set_sound+"/"+set_weather_id
-			});
+//			$.ajax({
+//				url : "http://localhost:8080/create",
+//				data : "action="+set_sound+"/"+set_weather_id
+//			});
 			alert("時間です！！");
 			set_alarm_switch(false);
 		}
@@ -80,15 +80,15 @@ function register() {
 	setTime($("#select_hour").val(), $("#select_minute").val());
 	set_sound = $('#select_sound').val();
 	date = new Date();
-	$.ajax({
-		url : "http://localhost:8080/time/register",
-		data : {
-			hour : set_hour,
-			minute : set_minute,
-			sound : set_sound,
-			weather_id : set_weather_id
-		}
-	});
+//	$.ajax({
+//		url : "http://localhost:8080/time/register",
+//		data : {
+//			hour : set_hour,
+//			minute : set_minute,
+//			sound : set_sound,
+//			weather_id : set_weather_id
+//		}
+//	});
 	alert(set_hour + '時' + set_minute + '分にサウンドはサウンド' + set_sound + '，天気は'+ weather_pref +" " + weather_city +'で登録しました！'+set_weather_id);
 	$('#reg_time').text("Registered Time " + set_hour + ":" + set_minute);
 }
