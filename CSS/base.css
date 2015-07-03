@@ -82,3 +82,10 @@ button#send_time{
     margin-bottom:20px; 
     font-size: 24pt;
 }
+
+footer{
+    border-top: 1px gray solid;
+    padding:10px 0px;
+    text-align: center;
+    color:gray;
+}
